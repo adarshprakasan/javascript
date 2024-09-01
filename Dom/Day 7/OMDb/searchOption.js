@@ -1,3 +1,10 @@
+let searchString = document.getElementById("searchString");
+searchString.addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    searchOption();
+  }
+});
+
 async function searchOption() {
   let displayString = document.getElementById("displayString");
   let goToHome = document.getElementById("goToHome");

@@ -41,5 +41,4 @@ async function movieHome() {
     console.log(err.message);
   }
 }
-
 movieHome();

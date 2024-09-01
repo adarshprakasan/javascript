@@ -6,9 +6,9 @@
 
 body {
   width: 100%;
-  background: linear-gradient(10deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)),
-    linear-gradient(45deg, rgba(0, 0, 0, 1), rgba(19, 5, 5, 0.689)),
-    radial-gradient(circle at 22% 29%, rgba(255, 0, 5, 1), rgba(255, 0, 255, 0));
+  background: linear-gradient(10deg, rgb(30, 0, 0), rgba(0, 0, 0, 0)),
+    linear-gradient(45deg, rgb(69, 0, 0), rgba(19, 5, 5, 0.689)),
+    radial-gradient(circle at 22% 29%, rgb(51, 0, 1), rgba(255, 0, 255, 0));
 }
 
 .header {
