@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LogIn</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="mainBody">
+      <div class="loginBody">
+        <h1 class="heading">Login Form</h1>
+        <form onsubmit="login(event)" class="loginform">
+          <div>
+            <input
+              type="tel"
+              name="mobile"
+              id="lmobile"
+              placeholder="Enter your mobile no."
+            />
+            <div
+              id="mobToggle"
+              title="Swap between email and mobile"
+              class="miniButton"
+              onclick="onSwap()"
+            >
+              <i class="fa-solid fa-at"></i>
+            </div>
+          </div>
+          <div>
+            <input
+              type="password"
+              name="password"
+              id="lpassword"
+              placeholder="Password"
+            />
+            <div id="pwToggle" class="miniButton" onclick="pwHide()">
+              <i class="fa-solid fa-eye"></i>
+            </div>
+          </div>
+          <div id="errMessage"><p class="errMsg"></p></div>
+          <div>
+            <button class="secButton">
+              <a href="./registration.html">Register</a>
+            </button>
+            <button type="submit">Login</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>

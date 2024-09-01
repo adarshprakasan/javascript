@@ -1,0 +1,39 @@
+<script>
+          let detailSection = document.getElementById("detailsBody");
+          userData = JSON.parse(localStorage.getItem("datas"));
+          let table = document.createElement("table");
+
+          let thead = document.createElement("thead");
+          let headtr = document.createElement("tr");
+          let slth = document.createElement("th");
+          slth.innerText = "SL NO.";
+          let nameth = document.createElement("th");
+          nameth.innerText = "Name of User";
+          let emailth = document.createElement("th");
+          emailth.innerText = "Email";
+          let mobileth = document.createElement("th");
+          mobileth.innerText = "Mobile No.";
+
+          headtr.append(slth, nameth, emailth, mobileth);
+          let tbody = document.createElement("tbody");
+
+          detailSection.prepend(table);
+          table.append(thead);
+          thead.append(headtr);
+          table.append(tbody);
+          userData.map(({ fullname, email, mobile }, slno) => {
+            let bodytr = document.createElement("tr");
+            let sltd = document.createElement("td");
+            let nametd = document.createElement("td");
+            let emailtd = document.createElement("td");
+            let mobiletd = document.createElement("td");
+
+            sltd.innerText = 1;
+            nametd.innerText = fullname;
+            emailtd.innerText = email;
+            mobiletd.innerText = mobile;
+
+            bodytr.append(sltd, nametd, emailtd, mobiletd);
+            tbody.append(bodytr);
+          });
+        </script>

@@ -1,0 +1,263 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.mainBody {
+  height: 730px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #d41d6d;
+}
+
+input {
+  width: 200px;
+  height: 40px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 2px solid #7b96d0;
+}
+
+input:focus {
+  border-color: #d41d6d;
+}
+
+.inputError {
+  width: 200px;
+  height: 30px;
+  border: 2px solid red;
+}
+
+button {
+  width: 48%;
+  height: 50px;
+  background-color: #8fb3ff;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+button:hover {
+  background-color: #7b96d0;
+}
+
+.secButton {
+  background-color: #ebf1ff;
+  color: #8fb3ff;
+}
+
+.secButton:hover {
+  background-color: #8fb3ff;
+  color: white;
+}
+
+button a {
+  text-decoration: none;
+  color: #8fb3ff;
+  font-weight: 500;
+}
+
+.secButton:hover a {
+  color: white;
+}
+
+.heading {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #d41d6d;
+}
+
+#errMessage {
+  width: 80%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.errMsg {
+  text-align: center;
+  font-size: 16px;
+  color: red;
+}
+
+.successMsg {
+  text-align: center;
+  font-size: 16px;
+  color: green;
+}
+
+/*^ -----------------------------------------  */
+
+.formBody {
+  background-color: white;
+  border-radius: 20px;
+  height: 400px;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.41);
+}
+
+form {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+form div {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+/*^ -----------------------------------------  */
+
+.loginBody {
+  background-color: white;
+  border-radius: 20px;
+  height: 350px;
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.41);
+}
+
+.loginform {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.loginform div {
+  width: 100%;
+  display: flex;
+  /* justify-content: space-between; */
+}
+
+#lmobile {
+  border: 2px solid #7b96d0;
+  width: 86%;
+}
+
+#lmobile:focus {
+  border: 1px solid #d41d6d;
+}
+
+#lpassword {
+  border: 2px solid #7b96d0;
+  width: 86%;
+}
+
+.loginform .miniButton {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ebf1ff;
+  color: #7b96d0;
+  border-radius: 5px;
+}
+
+.miniButton:hover {
+  color: white;
+  background-color: #7b96d0;
+}
+
+/*^ -----------------------------------------  */
+
+.userDetailsBody {
+  height: 730px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+}
+
+#currentUser {
+  /* border: 2px solid red; */
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0px;
+  position: sticky;
+  background-color: rgb(235, 241, 255);
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.236);
+}
+
+#detailsBody {
+  height: 520px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+th {
+  border: 2px solid #d41d6d;
+  border-radius: 5px;
+  border-collapse: collapse;
+  margin: 20px;
+  padding: 20px;
+  background-color: #8fb3ff;
+}
+
+tr,
+td {
+  border: 2px solid #d41d6d;
+  border-radius: 5px;
+  border-collapse: collapse;
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+/*^ -----------------------------------------  */
+
+.otpBody {
+  background-color: white;
+  border-radius: 20px;
+  height: 300px;
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.41);
+}
+
+#otpSection {
+  width: 80%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
