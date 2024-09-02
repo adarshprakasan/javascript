@@ -19,6 +19,7 @@
             id="searchString"
             type="text"
             placeholder="Search for Movies"
+            onkeyup="searchOption()"
           />
           <i class="fa-solid fa-magnifying-glass" onclick="searchOption()"></i>
         </div>
@@ -30,6 +31,9 @@
         <div id="goToHome"></div>
       </div>
       <div id="movieList">
+        <div class="loaderDiv">
+          <div class="loader"></div>
+        </div>
         <!-- ------------------------------- -->
 
         <!--<div class="cardContainer">

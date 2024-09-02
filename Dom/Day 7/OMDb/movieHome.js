@@ -4,15 +4,13 @@ async function movieHome() {
       "https://www.omdbapi.com/?s=avengers&apikey=428f8624"
     );
     movies = await movies.json();
+    movies = await movies.Search;
 
-    console.log(movies);
     if (movies) {
-      let moviesList = Object.values(movies.Search);
-      console.log(moviesList);
+      let movieList = document.getElementById("movieList");
+      movieList.innerHTML = "";
 
-      moviesList.map(({ Title, Type, Poster, Year }) => {
-        let movieList = document.getElementById("movieList");
-
+      movies.map(({ Title, Type, Poster, Year }) => {
         let cardContainer = document.createElement("div");
         cardContainer.className = "cardContainer";
         let movieCard = document.createElement("div");
