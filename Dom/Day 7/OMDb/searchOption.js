@@ -5,6 +5,43 @@ searchString.addEventListener("keydown", function (event) {
   }
 });
 
+// ====================================================
+
+let pagenumber = 1;
+let prevPg = document.getElementById("prevPg");
+let nextPg = document.getElementById("nextPg");
+function nextPage() {
+  pagenumber++;
+  console.log(pagenumber);
+  searchOption();
+}
+
+function prevPage() {
+  if (pagenumber > 1) {
+    pagenumber--;
+    console.log(pagenumber);
+    searchOption();
+  }
+}
+
+// ====================================================
+
+let timeout;
+searchString.addEventListener("input", () => {
+  let searchingString = searchString.value.trim();
+  clearTimeout(timeout);
+  timeout = setTimeout(() => {
+    if (searchingString === "") {
+      searchOption();
+    } else {
+      searchOption(searchingString);
+      console.log("Hello");
+    }
+  }, 700);
+});
+
+// ====================================================
+
 async function searchOption() {
   let displayString = document.getElementById("displayString");
   let goToHome = document.getElementById("goToHome");
@@ -14,12 +51,24 @@ async function searchOption() {
     let searchString = document.getElementById("searchString").value;
     console.log(searchString);
 
+    console.log(
+      `https://www.omdbapi.com/?s=${searchString}&page=${pagenumber}&apikey=428f8624`
+    );
+
     let movies = await fetch(
-      `https://www.omdbapi.com/?s=${searchString}&apikey=428f8624`
+      `https://www.omdbapi.com/?s=${searchString}&page=${pagenumber}&apikey=428f8624`
     );
     movies = await movies.json();
     movies = await movies.Search;
     movieList.innerHTML = "";
+
+    if (pagenumber === 1) {
+      prevPg.style.display = "none";
+      nextPg.style.display = "block";
+    } else {
+      prevPg.style.display = "block";
+      nextPg.style.display = "block";
+    }
 
     if (movies === undefined && !movieList.innerHTML) {
       displayString.innerHTML = `<h1>No results for "${searchString}"`;

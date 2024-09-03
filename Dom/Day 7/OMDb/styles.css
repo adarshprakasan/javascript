@@ -141,6 +141,28 @@ input {
   color: white;
 }
 
+#pageChanger {
+  width: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+#pageChanger button {
+  display: none;
+  border: 1px solid white;
+  color: white;
+  border-radius: 10px;
+  font-size: 18px;
+  padding: 10px;
+  cursor: pointer;
+  margin: 20px;
+  background: linear-gradient(10deg, rgba(0, 0, 0, 0.758), rgba(0, 0, 0, 0)),
+    linear-gradient(45deg, rgba(0, 0, 0, 0.778), rgba(19, 5, 5, 0.689)),
+    radial-gradient(circle at 22% 29%, rgba(255, 0, 5, 1), rgba(255, 0, 255, 0));
+}
+
 #movieList {
   /* border: 2px solid blue; */
   padding: 20px;

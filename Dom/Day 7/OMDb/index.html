@@ -15,11 +15,16 @@
       <div class="mainContainer">
         <h1 class="logo"><a href="./index.html">movDB</a></h1>
         <div class="searchInput">
-          <input
+          <!-- <input
             id="searchString"
             type="text"
             placeholder="Search for Movies"
             onkeyup="searchOption()"
+          /> -->
+          <input
+            id="searchString"
+            type="text"
+            placeholder="Search for Movies"
           />
           <i class="fa-solid fa-magnifying-glass" onclick="searchOption()"></i>
         </div>
@@ -47,6 +52,10 @@
         </div> -->
 
         <!-- ------------------------------- -->
+      </div>
+      <div id="pageChanger">
+        <button id="prevPg" onclick="prevPage()">Prev</button>
+        <button id="nextPg" onclick="nextPage()">Next</button>
       </div>
     </div>
     <script src="./movieHome.js"></script>
