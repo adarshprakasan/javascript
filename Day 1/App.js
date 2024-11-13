@@ -30,3 +30,9 @@
 // ! Prompt()
 // let name1 = prompt("Enter your full name:");
 // console.log(name1);
+
+let demo = function () {
+  console.log("hi");
+  return "hello";
+};
+console.log(demo());

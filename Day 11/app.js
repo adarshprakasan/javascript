@@ -104,8 +104,8 @@
 
 //^ find()
 // let res = numbers.find((ele) => {
-//     return ele > 4; //& 6
-//     // return ele > 24; //& undefined
+//   return ele > 4; //& 6
+//   // return ele > 24; //& undefined
 // });
 // console.log(res);
 
@@ -182,17 +182,3 @@
 //   // return ele > 24; //& undefined
 // });
 // console.log(res);
-
-let numbers = [3, 6, 1, 7, 4, 19, 2, 9];
-a = 0;
-for (let i in numbers) {
-  if (number[i] > 6) {
-    return true;
-    break;
-  } else {
-    a = 1;
-  }
-}
-if (a === 1) {
-  return false;
-}

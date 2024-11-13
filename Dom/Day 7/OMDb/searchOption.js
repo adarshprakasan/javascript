@@ -12,14 +12,12 @@ let prevPg = document.getElementById("prevPg");
 let nextPg = document.getElementById("nextPg");
 function nextPage() {
   pagenumber++;
-  console.log(pagenumber);
   searchOption();
 }
 
 function prevPage() {
   if (pagenumber > 1) {
     pagenumber--;
-    console.log(pagenumber);
     searchOption();
   }
 }
@@ -50,10 +48,6 @@ async function searchOption() {
   try {
     let searchString = document.getElementById("searchString").value;
     console.log(searchString);
-
-    console.log(
-      `https://www.omdbapi.com/?s=${searchString}&page=${pagenumber}&apikey=428f8624`
-    );
 
     let movies = await fetch(
       `https://www.omdbapi.com/?s=${searchString}&page=${pagenumber}&apikey=428f8624`

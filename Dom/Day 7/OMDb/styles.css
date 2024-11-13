@@ -141,6 +141,20 @@ input {
   color: white;
 }
 
+.sortIt {
+  width: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  gap: 20px;
+}
+
+.sortIt input {
+  height: 20px;
+  width: 20px;
+}
+
 #pageChanger {
   width: 1000px;
   display: flex;
